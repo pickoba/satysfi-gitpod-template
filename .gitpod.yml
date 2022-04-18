@@ -1,1 +1,2 @@
-image: amutake/satysfi:latest
+image:
+  file: .gitpod.Dockerfile
