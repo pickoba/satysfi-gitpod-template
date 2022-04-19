@@ -1,9 +1,6 @@
 FROM gitpod/workspace-base
 
-RUN sudo apt-get update && sudo apt-get install -y --no-install-recommends \
-        opam \
-    && sudo apt-get -y clean \
-    && sudo rm -r /var/lib/apt/lists/*
+RUN sudo install-packages opam
 
 USER gitpod
 
