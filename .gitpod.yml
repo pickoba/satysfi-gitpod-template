@@ -1,2 +1,11 @@
 image:
   file: .gitpod.Dockerfile
+
+ports:
+  - port: 3000
+    onOpen: open-preview
+
+vscode:
+  extensions:
+    - pickoba.satysfi-workshop
+    - tomoki1207.pdf
