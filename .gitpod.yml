@@ -5,9 +5,7 @@ ports:
   - port: 3000
     onOpen: open-preview
 
-tasks:
-  - command: open document.saty document.pdf
-
 vscode:
   extensions:
+    - pickoba.satysfi-workshop
     - tomoki1207.pdf
