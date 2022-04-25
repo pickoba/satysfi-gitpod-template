@@ -1,0 +1,66 @@
+@require: stdja
+@require: annot
+@require: itemize
+
+document (|
+  title = {\SATySFi; Gitpod Template};
+  author = {pickoba};
+  show-title = true;
+  show-toc = false;
+|) '<
+  +p{
+    このリポジトリは \SATySFi; 用の Gitpod テンプレートです。
+  }
+
+  +section{文書のコンパイル}<
+    +p{
+      以下のいずれかの方法で文書をコンパイルすることができます。
+      \enumerate{
+        * ショートカットキー `ctrl`/`cmd` + `alt` + `b`
+        * エディタ右上のボタン（再生マーク）
+        * 統合ターミナルで `satysfi document.saty` を実行
+      }
+    }
+  >
+
+  +section{Language Server の利用}<
+    +p{
+      このテンプレートでは Language Server （\href(`https://github.com/monaqa/satysfi-language-server`){monaqa/satysfi-language-server}）がセットアップ済であり、入力補完等の支援を既に受けられる状態になっています。Language Server のバイナリは以下のコマンドで更新できます（統合ターミナルで入力してください）。
+    }
+
+    +code(```
+    cargo install --git https://github.com/monaqa/satysfi-language-server
+    ```);
+  >
+
+  +section{ライブラリの追加}<
+    +p{
+      通常の環境と同じく、`opam` と `satyrographos` を用いて新たなライブラリを追加できます。以下は `satysfi-base` をインストールする例です。
+    }
+
+    +code(```
+    opam install satysfi-base && satyrographos install
+    ```);
+
+    +p{
+      再現可能なビルドとするためには、`.gitpod.Dockerfile` 内に記述することもおすすめです。
+    }
+  >
+
+  +section{その他コマンドの追加・設定変更}<
+    +p{
+      永続的な変更であれば `.gitpod.Dockerfile` 内に記述することをお勧めします。一時的なものの場合、統合ターミナルから `apt` などを通じて新たなパッケージを追加できます。デフォルトユーザは gitpod ですが、`sudo` はパスワードなしで使えるようになっています。
+    }
+  >
+
+  +section{連絡先}<
+    +p{
+      バグ報告等あれば以下にご連絡ください。
+      \listing{
+        * GitHub (Template): \href(`https://github.com/pickoba/satysfi-gitpod-template`){https://github.com/pickoba/satysfi-gitpod-template}
+        * GitHub (Docker Image): \href(`https://github.com/pickoba/gitpod-satysfi`){https://github.com/pickoba/gitpod-satysfi}
+        * \SATySFi; Slack: \@pickoba
+      }
+    }
+  >
+>

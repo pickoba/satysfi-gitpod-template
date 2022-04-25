@@ -1,2 +1,13 @@
 image:
   file: .gitpod.Dockerfile
+
+ports:
+  - port: 3000
+    onOpen: open-preview
+
+tasks:
+  - command: open document.saty document.pdf
+
+vscode:
+  extensions:
+    - tomoki1207.pdf
