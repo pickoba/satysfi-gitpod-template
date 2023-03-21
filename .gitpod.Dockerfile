@@ -1,4 +1,4 @@
-FROM pickoba/gitpod-satysfi:0.0.7
+FROM pickoba/gitpod-satysfi:0.0.8
 
 USER gitpod
 
