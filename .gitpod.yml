@@ -8,4 +8,4 @@ ports:
 vscode:
   extensions:
     - pickoba.satysfi-workshop
-    - tomoki1207.pdf
+    - james-yu.latex-workshop
