@@ -1,5 +1,8 @@
 {
     "editor.suggest.snippetsPreventQuickSuggestions": false,
-    "satysfi-workshop.executable": "/home/gitpod/.opam/4.14.1/bin/satysfi",
-    "satysfi-workshop.languageServer.enabled": true
+    "satysfi-workshop.executable": "saphe",
+    "satysfi-workshop.build.buildOptions": ["build"],
+    "satysfi-workshop.typecheck.when": "onSave",
+    "satysfi-workshop.typecheck.buildOptions": ["build", "--type-check-only"],
+    "satysfi-workshop.languageServer.enabled": false
 }
