@@ -1,12 +1,12 @@
-@require: stdja
-@require: annot
-@require: itemize
+use package open StdJa
+use package open Annot
+use package open Code
+use package open Itemize
+use package open Stdlib.Pervasives
 
 document (|
-  title = {\SATySFi; Gitpod Template};
-  author = {pickoba};
-  show-title = true;
-  show-toc = false;
+  title = {\SATySFi; Gitpod Template},
+  author = {pickoba},
 |) '<
   +p{
     このリポジトリは \SATySFi; 用の Gitpod テンプレートです。
@@ -18,38 +18,14 @@ document (|
       \enumerate{
         * ショートカットキー `ctrl`/`cmd` + `alt` + `b`
         * エディタ右上のボタン（再生マーク）
-        * 統合ターミナルで `satysfi document.saty` を実行
+        * 統合ターミナルで `saphe build document.saty` を実行
       }
     }
   >
 
-  +section{Language Server の利用}<
-    +p{
-      このテンプレートでは Language Server （\href(`https://github.com/monaqa/satysfi-language-server`){monaqa/satysfi-language-server}）がセットアップ済であり、入力補完等の支援を既に受けられる状態になっています。Language Server のバイナリは以下のコマンドで更新できます（統合ターミナルで入力してください）。
-    }
-
-    +code(```
-    cargo install --git https://github.com/monaqa/satysfi-language-server
-    ```);
-  >
-
   +section{ライブラリの追加}<
     +p{
-      通常の環境と同じく、`opam` と `satyrographos` を用いて新たなライブラリを追加できます。以下は `satysfi-base` をインストールする例です。
-    }
-
-    +code(```
-    opam install satysfi-base && satyrographos install
-    ```);
-
-    +p{
-      再現可能なビルドとするためには、`.gitpod.Dockerfile` 内に記述することもおすすめです。
-    }
-  >
-
-  +section{その他コマンドの追加・設定変更}<
-    +p{
-      永続的な変更であれば `.gitpod.Dockerfile` 内に記述することをお勧めします。一時的なものの場合、統合ターミナルから `apt` などを通じて新たなパッケージを追加できます。デフォルトユーザは gitpod ですが、`sudo` はパスワードなしで使えるようになっています。
+      ライブラリは `document.saphe.yaml` に記述し、`saphe solve document.saty` で依存解決を行います。詳細は\href(`https://gfngfn.github.io/ja/posts/2024-01-15-saphe-a-new-prototype-ecosystem-for-satysfi-the-first-half/`){「SATySFi 0.1.0の新しいエコシステムSapheのプロトタイプについて（前編）」}などを参照してください。
     }
   >
 
